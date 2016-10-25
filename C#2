@@ -1,0 +1,42 @@
+using System;
+namespace ConsoleApplication1
+{
+    class car
+    {
+        public car()
+        {
+            Console.WriteLine("Base Model Car");
+        }
+        public virtual void DriveType()
+        {
+
+            Console.WriteLine("Right Hand Drive");
+        }
+    }
+    class Ford : car
+    {
+        public Ford()
+        {
+            Console.WriteLine("Derived Model Car");
+        }
+        public void price()
+        {
+            Console.WriteLine("The price of Ford is $25,000");
+        }
+        public override void DriveType()
+        {
+            Console.WriteLine("Right Hand");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            car c1 = new car();
+            c1.DriveType();
+            c1 = new Ford();
+            c1.DriveType();
+            Console.ReadLine();
+        }
+    }
+}

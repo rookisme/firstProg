@@ -1,0 +1,43 @@
+using System;
+namespace TwoVectorsChecker
+{
+    class vector
+    {
+        public int member1, member2, member3;
+
+        public vector(int m1, int m2, int m3)
+        {
+            this.member1 = m1;
+            this.member2 = m2;
+            this.member3 = m3;
+        }
+        public static bool operator== (vector x, vector z)
+        {
+            bool stat = false;
+            if (x.member1 == z.member1 && x.member2 == z.member2 && x.member3 == z.member3)
+            {
+                stat = true;
+            }
+            return stat;
+        }
+        public static bool operator != (vector x, vector z)
+        {
+            bool stat = false;
+            if (x.member1 != z.member1 || x.member2 != z.member2 || x.member3 != z.member3)
+            {
+                stat = true;
+            }
+            return stat;
+        }
+
+        public static void Main(string[] args)
+        {
+            vector V1 = new vector(12, 15, 16);
+            vector V2 = new vector(12, 5, 16);
+            Console.Write("the two objects V1 (12,15,16) and V2 (12,5,16) are they equal? \n The answer is: {0}"
+                , V1==V2);
+            Console.ReadLine();
+
+        }
+    }
+}

@@ -1,0 +1,23 @@
+using System;
+
+class FinallyWorking
+{
+    static void Main(string[] args)
+    {
+        int high, num, star;
+        for ( high = 1; high < 8; high++) // the high of the loop
+        {
+            for( num = 7; num >= high; num--)  //decreasing numbers
+            {
+                Console.Write(num);
+              
+            }
+            for (star = 0; star <= num; star++) // stars overwriting the numbers
+            {
+                Console.Write('*');
+            }
+            Console.WriteLine();
+        }
+        Console.ReadLine();
+    }
+}

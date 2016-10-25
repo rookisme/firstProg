@@ -1,0 +1,20 @@
+using System;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numberoflayer = 8, Space, Number;
+            for (int i = 1; i <= numberoflayer; i++) // Total number of layer for pramid
+            {
+                for (Space = 1; Space <= (numberoflayer - i); Space++)  // Loop For Space
+                    Console.Write(Space);
+                for (Number = 1; Number <= 7; Number++) //increase the value
+                     Console.Write('*');
+              //  for (Number = (i - 1); Number >= 1; Number--)  //decrease the value
+                 //   Console.Write('*');
+                Console.WriteLine();
+            }
+        Console.ReadLine();
+        }
+    }
